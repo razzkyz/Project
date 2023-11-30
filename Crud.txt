@@ -1,0 +1,5 @@
+Web Customer : http://localhost/cafe/web.php
+
+Web Staff Cafe / Admin : http://localhost/cafe/index.php
+Email : admin@gmail.com
+Password : pin832295
