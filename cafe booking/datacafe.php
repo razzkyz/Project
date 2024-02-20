@@ -184,6 +184,25 @@
             </tr>
           </thead>
           <tbody>
+           <?php
+                include 'config.php';
+                $query1="select * from reservasi order by id_user ";
+                
+                $pola='asc';
+                $polabaru='asc';
+                if(isset($_GET['orderby'])){
+                  $orderby=$_GET['orderby'];
+                  $pola=$_GET['pola'];
+                  
+                  $query1="SELECT * FROM  reservasi WHERE Ruangan like '%$pencarian%' order by $orderby $pola ";
+                  if($pola=='asc'){
+                    $polabaru='desc';
+                    
+                  }else{
+                    $polabaru='asc';
+                  }
+                }
+                ?>
           <?php
           include 'config.php';
           if(isset($_GET['cari'])){
