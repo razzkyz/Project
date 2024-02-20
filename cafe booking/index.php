@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = md5($_POST['password']);
  
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+   $query = "SELECT * FROM reservasi WHERE Nama LIKE '%$pencarian%' or Email LIKE '%$pencarian%' or Ruangan LIKE '%$pencarian%' order by id_user" ;
     $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
